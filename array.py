@@ -1,6 +1,6 @@
-# Program to process an array of scores
+import sys
 
-scores = list(map(float, input("Enter scores separated by spaces: ").split()))
+scores = list(map(float, sys.argv[1:]))
 
 if len(scores) == 0:
     print("No scores entered.")
@@ -10,7 +10,7 @@ else:
     maximum = max(scores)
     minimum = min(scores)
 
-    print("\nScores:", scores)
+    print("Scores:", scores)
     print("Sum of scores:", total)
     print("Average of scores:", average)
     print("Maximum score:", maximum)
